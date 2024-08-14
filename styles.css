@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding and border are included in the element's width and height */
+}
+
+body{
+    background-color: rgb(22, 19, 19);
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6; /* Improves readability */
+}
+
+h1.title{
+    color: snow;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.cards-container {
+    width: 90%; /* 90% of the whole width */
+    background-color: rgb(237, 237, 216);
+    margin: 0 auto; /* Horizontally centers the element */
+    padding: 20px; /* Prevents margin collapse and adds internal spacing */
+    overflow: hidden; /* Clears the float to ensure the container wraps around the floated elements */
+    border-radius: 1%;
+}
+
+.left-card, .right-card {
+    width: 45%; /* % of the parent - .cards-container */
+    background-color: rgb(44, 33, 33);
+    color: snow;
+    float: left; /* Floats the element to the left */
+    margin-bottom: 20px; /* Adds space below each card */
+    padding: 15px;
+    border-radius: 5px; /* Adds a slight rounding to the card edges */
+}
+
+.right-card {
+    float: right; /* Floats the element to the right */
+    margin-right: 0; /* Removes extra margin on the right side */
+}
+
+img {
+    width: 100%; /* Makes the image take the full width of its parent container */
+    display: block;
+    margin-bottom: 10px; /* Adds some space below the image */
+    border-radius: 5px; /* Gives images a slightly rounded edge */
+}
+
+.bullets {
+    width: 50px;
+    float: left;
+    margin-top: 10px;
+    margin-right: 15px; /* Adds more space between the bullet and the text */
+}
+
+
+h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+h1, h3 {
+    font-family: 'Roboto Slab', serif;
+}
+
+.image-description {
+    font-size: 14px;
+    font-weight: 300;
+    padding: 10px;
+}
+
+/* Media Query for Mobile Devices and Small Screens */
+@media (max-width: 768px) {
+    .cards-container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .left-card, .right-card {
+        width: 100%; /* Cards take full width on smaller screens */
+        float: none; /* Remove float */
+        margin-right: 0; /* Remove right margin */
+        margin-bottom: 20px;
+    }
+
+    img {
+        width: 80%; /* Center images with a slightly reduced width */
+        margin: 0 auto 15px; /* Center the images and add space below */
+        display: block;
+    }
+
+    .bullets {
+        width: 40px; /* Slightly reduce bullet size for smaller screens */
+        float: none; /* Remove float to stack bullet images above text */
+        display: block;
+        margin: 10px auto; /* Center bullets and add spacing */
+    }
+
+    h3 {
+        text-align: center; /* Ensure titles are centered */
+        margin-top: 10px;
+    }
+}
+
+
